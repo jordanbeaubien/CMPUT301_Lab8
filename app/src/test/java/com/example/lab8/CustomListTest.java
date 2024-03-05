@@ -13,10 +13,21 @@ import java.util.ArrayList;
 public class CustomListTest {
 
     /**
-     * create a mocklist for my citylist * @return
+     * Create a mockList for my cityList
+     * @return the created mock cityList
      */
     public CustomList MockCityList(){
         return new CustomList(null,new ArrayList<>());
+    }
+
+    /**
+     * Create a mock City
+     * @param CityName          Name of City
+     * @param ProvinceName      Name of City's province
+     * @return                  City object with above details
+     */
+    public City mockCity(String CityName, String ProvinceName) {
+        return new City(CityName, ProvinceName);
     }
 
     /**
@@ -32,4 +43,23 @@ public class CustomListTest {
         assertEquals(cityList.getCount(),listSize + 1);
     }
 
+    /*
+     * Lab Exercise
+     * • Implement has city, delete city, and count cities (same as lab 6), however, this time using TDD.
+     * • Create each functionality one at a time, creating (and pushing) a test to create a failing build, before adding functionality to make it pass.
+     * • e.g., create hasCity test, push for failing build, write functionality for hasCity to make passing build. Repeat for delete city and count cities.
+     * Please submit the link to your repo/fork.
+     */
+
+
+    /**
+     * Check if city is present in list
+     */
+    @Test
+    public void hasCityTest(){
+        CustomList cityList = MockCityList();
+        City mockCity = mockCity("Estevan", "SK");
+        cityList.addCity(mockCity);
+        assertEquals(cityList.hasCity(mockCity), true);
+    }
 }
