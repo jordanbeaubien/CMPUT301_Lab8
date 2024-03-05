@@ -71,4 +71,12 @@ public class CustomList extends ArrayAdapter<City> {
     public Boolean hasCity(City city) {
         return cities.contains(city);
     }
+
+    /**
+     * Remove an existing City from CityList
+     * @param city  City to remove
+     */
+    public void deleteCity(City city) {
+
+    }
 }
