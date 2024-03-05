@@ -31,9 +31,10 @@ public class CustomListTest {
     }
 
     /**
-     * get the size of the list
-     * increase the list by adding a new city
-     * check if our current size matches the initial size plus one
+     * <code>Written by lab8 demonstration</code> <br>
+     * -> Get the size of the list <br>
+     * -> Increase the list by adding a new city <br>
+     * -> Check if our current size matches the initial size plus one <br>
      */
     @Test
     public void addCityTest(){
