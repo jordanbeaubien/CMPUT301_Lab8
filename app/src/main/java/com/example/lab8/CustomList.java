@@ -79,4 +79,11 @@ public class CustomList extends ArrayAdapter<City> {
     public void deleteCity(City city) {
         cities.remove(city);
     }
+
+    /**
+     * Count number of City objects in CityList
+     */
+    public int countCities() {
+        return null;
+    }
 }

@@ -74,4 +74,17 @@ public class CustomListTest {
         cityList.deleteCity(mockCity);
         assertEquals(false, cityList.hasCity(mockCity));
     }
+
+    /**
+     * Check count of cities in list.
+     */
+    @Test
+    public void countCitiesTest(){
+        CustomList cityList = MockCityList();
+        City mockCity = mockCity("Estevan", "SK");
+        cityList.addCity(mockCity);
+        cityList.addCity(mockCity);
+        cityList.addCity(mockCity);
+        assertEquals(3, cityList.countCities());
+    }
 }
